@@ -2,8 +2,8 @@ language: python
 
 env:
   global:
-    - secure: "GH+DI7f9QenVtTZFEfn4B8wO5JJK65PkHDg8vY/npdW51y5PPAynTEf/++D0H4tjwqMuXwB5lrbWfYeskf29Xuq5MT5+FixajZFcbhscoSM9CGABeph2s2+Hm4kSIKmjnTlQLgJHVbwypnlU/W4sfMCbqeOmv2fYXCCt0GhtnWc="
-    - secure: "du3PQYEiDPw55TRzhk+Ocv1Gx1DuusbCSMVSQmccAoyOr7qxDqm+1jh2v13RmajNK7FnlKyC4xSTySVpSl70By2uhZlJT43EpenqIcpQWqUAm3nVr6etszdb1A6TfEGQrxZ8Y2j9KD6QAMNovsMZbl0bcDJDxTeFA4P/yU9UZcI="
+    - secure: mEkqlpcfUvShRE7dj2bxpFzvHjDoIjcvHduA4JX4gZfVVwDeEgFC9Pbb0oaR7xEiKeKSQ7IT0FyD6hteNviGSSebg6xkqWmhxSzI4fVk/hJ8FZVRsdNr6zEDhl1PNdmZL+UGauKGh5STbHXgSv1J/TOKwqzPBC7CpHXdRjPn1DfA7r9dkh1yWI1ONA+iFbkY7DhWer+9FgwET/StIbmYE0+eb+1lHQ7FSTnVAfTZl2eljaTly4VVqNPgyfbjc1//ieomrB6c+ziEyW6SeizQZrNeX6s90TKIN35rtE44WO4IH8y4bGEmsn5dQBf4g/m5je0rIvJG9Ag+WUwpGuOCKuHVBTI8hPpepaQyaQ4L2VZbu06rnt5AwqjnHDrXfxnPbctBKyiqtN47STTiLz6jdVhPEAebz7LMIKXKPC3lS7u0BOPq2pIDf7UruWLdYWsxWkR8MSY8JPrq6IezyJbrN9vIQtdKMm4UrTIfhUEyGYbTPSZooc/KqP2p/EfbwjePBtg1kSVoajvHtMItTrcQPM4kVxg5kp8HQvwEK4ts9/2Ew0/rwE1P63ozU2hFd1cuMalz43bq52vy4rfnfOlPZok0dzTfB0GGCU0OAYZ4H9nQ2mMD4t4fKZoPFBD+eIlYih4BX8C+rqbg8WMqkhVNV630JbR0Fj4cUmEW6XpbRJI=
+    - secure: NeH/++qkbE7xvxJXY0C/Rjl8VNgtCuxiZSV3yEoFBoZY0Hp/LgA/rO8ZhGdY09u17Gzfazw4P0RbFO0kkwCaNAM5WMIt0hFN2kWHzXxy97ahtrR/8yqF2Jib6104Y+rkraWDyP0n9KJc1t5Wsk8zdvxXOaETgkTNFsDVF3fKNuuV6URUwbKHqJQPAEj+J45AcR54F4A/NvS1ehUJrha4Ap28FR41rXPxiQ590clfB/AYQeSV+XqY+Svo8nE5e0iZTQ6kW/kKRs41mn1FzXe+5jxen0ZIh/8HtGT1F+QKBOw2Rqj8oI+NReNH6SMPINYE7EgDB6R4g6css4r7tfY2GeVCpJhV7TpDROS2Ygw+c88SebD191AgoE7qVuW7zQ1FsZKXkkx02M7laPAGaXlK7tCiXBE+EG66/4rlnXcWF94995w6HGvP9CBanIRGi7Yt9jcY4XdIV8T979EunII4ZcrIPOgCmUfCO8dbRJI3Ct2V7eerXc31qPzTrGzP2ADcjwSYifzyHaTNvcxnBneSj248l5I2GqrazlrEhpQx0G+p0gBRPTtzBo5DTCKkJ3sv+BpzIi/rSILBPBsaVdx/M6a7w1wKHyFDHqRykpRfxrl0dLWTOLoYGcxQ+sIqgRGQI1pHZICWrOuT2VmnXJ2Z8idPSkjHGH6bsrfppBDh/b0=
 
 
 matrix:
@@ -11,22 +11,22 @@ matrix:
     - python: '2.7'
       env:
         - SO_DISABLE_MOCKS: "1"
-        - SO_S3_URL: "s3://smart-open-py27-benchmark"
-        - SO_S3_RESULT_URL: "s3://smart-open-py27-benchmark-results"
+        - SO_S3_URL: "s3://affectiva-travis-smart-open-test/py27"
+        - SO_S3_RESULT_URL: "s3://affectiva-travis-smart-open-test/py27-results"
 
     - python: '3.5'
 
     - python: '3.6'
       env:
         - SO_DISABLE_MOCKS: "1"
-        - SO_S3_URL: "s3://smart-open-py36-benchmark"
-        - SO_S3_RESULT_URL: "s3://smart-open-py36-benchmark-results"
+        - SO_S3_URL: "s3://affectiva-travis-smart-open-test/py36"
+        - SO_S3_RESULT_URL: "s3://affectiva-travis-smart-open-test/py36-results"
 
     - python: '3.7'
       env:
         - SO_DISABLE_MOCKS: "1"
-        - SO_S3_URL: "s3://smart-open-py37-benchmark"
-        - SO_S3_RESULT_URL: "s3://smart-open-py37-benchmark-results"
+        - SO_S3_URL: "s3://affectiva-travis-smart-open-test/py37"
+        - SO_S3_RESULT_URL: "s3://affectiva-travis-smart-open-test/py37-results"
         - BOTO_CONFIG: "/dev/null"
       dist: xenial
 
